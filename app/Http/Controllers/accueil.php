@@ -9,28 +9,19 @@ use Image;
 class accueil extends Controller
 {
     public function index() {
-        Cache::forever('cle', 'voici la valeur du cache');
-        // Cache::flush();
-        dd(
-            Cache::get('cle')
-        );
-        return view('welcome');
+        // Cache::forever('cle', 'voici la valeur du cache');
+        // // Cache::flush();
+        // dd(
+        //     Cache::get('cle')
+        // );
+        return view('accueil');
     }
-    // /**
-    //  * Show the form for creating a new resource.
-    //  *
-    //  * @return \Illuminate\Http\Response
-    //  */
+
     public function resizeImage()
     {
         return view('welcome');
     }
   
-    // /**
-    //  * Show the form for creating a new resource.
-    //  *
-    //  * @return \Illuminate\Http\Response
-    //  */
     public function resizeImagePost(Request $request)
     {
         $this->validate($request, [

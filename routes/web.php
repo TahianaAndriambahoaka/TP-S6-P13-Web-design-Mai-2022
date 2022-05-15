@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', 'App\Http\Controllers\accueil@index');
-Route::get('/', 'App\Http\Controllers\accueil@resizeImage');
+Route::get('/', 'App\Http\Controllers\accueil@index');
+// Route::get('/', 'App\Http\Controllers\accueil@resizeImage');
 
 Route::get('resizeImage', 'App\Http\Controllers\accueil@resizeImage');
 Route::post('resizeImagePost', 'App\Http\Controllers\accueil@resizeImagePost')->name('resizeImagePost');
