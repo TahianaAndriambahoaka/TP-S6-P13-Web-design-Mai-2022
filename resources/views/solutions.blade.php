@@ -16,26 +16,39 @@
   <main class="hoc container clear"> 
     <!-- main body -->
     <section id="services">
-      <div class="sectiontitle">
-        <h6 class="heading">Voici les initiatives prises fâce au réchauffement climatique</h6>
-      </div>
-      <ul class="nospace group grid-3 animate__animated animate__fadeInRight">
-        @for ($i = 0; $i < count($articles); $i++)
-          <li class="one_third animate__animated animate__pulse">
-            <article><a href="{{ 'solutions/'.str_slug($articles[$i]->titre,'-').'-'.$articles[$i]->id }}"><i class="fas fa-question"></i></a>
-              <h6 class="heading">{{ $articles[$i]->titre }}</h6>
-              <p>
-                @if ( strlen($articles[$i]->contenu) >= 75)
-                  {{ substr($articles[$i]->contenu, 0, 75)."..." }}
-                @else
-                  {{ $articles[$i]->contenu }}
-                @endif
-              </p>
-              <footer><a href="{{ 'solutions/'.str_slug($articles[$i]->titre,'-').'-'.$articles[$i]->id }}">Plus d'informations &raquo;</a></footer>
-            </article>
-          </li>
-        @endfor
-      </ul>
+      @if (!isset($data))
+        <div class="sectiontitle">
+          <h1 class="heading">Voici les initiatives prises fâce au réchauffement climatique</h1>
+        </div>
+        <ul class="nospace group grid-3 animate__animated animate__fadeIn">
+          @for ($i = 0; $i < count($articles); $i++)
+            <li class="one_third animate__animated animate__pulse">
+              <article><a href="{{ '/solutions/'.str_slug($articles[$i]->titre,'-').'-'.$articles[$i]->id }}"><i class="fas fa-question"></i></a>
+                <h2 class="heading">{{ $articles[$i]->titre }}</h2>
+                <p>
+                  @if ( strlen($articles[$i]->contenu) >= 75)
+                    {{ substr($articles[$i]->contenu, 0, 75)."..." }}
+                  @else
+                    {{ $articles[$i]->contenu }}
+                  @endif
+                </p>
+                <footer><a href="{{ '/solutions/'.str_slug($articles[$i]->titre,'-').'-'.$articles[$i]->id }}">Plus d'informations &raquo;</a></footer>
+              </article>
+            </li>
+          @endfor
+        </ul>
+      @else
+        <div>
+          <div class="sectiontitle animate__animated animate__fadeInDown">
+            <h1 class="heading">{{ $data[0]->titre }}</h1>
+          </div>
+          <div style='float:left; width:35%' class="animate__animated animate__fadeInLeft"><img src="{{ asset('images/'.$data[0]->image) }}" alt=""></div>
+          <div style='float:left; width:60%; margin-left:5%' class="animate__animated animate__fadeInRight">
+            <h2>Pourquoi {{ $data[0]->titre }}?</h2>
+            <p>{{ $data[0]->contenu }}</p>
+          </div>
+        </div>
+      @endif
     </section>
     <!-- / main body -->
     <div class="clear"></div>

@@ -18,6 +18,6 @@ class causes extends Controller
         for ($i=1; $i < count($exp)-1; $i++) $url.='-'.$exp[$i];
         $data = DB::Select(sprintf("select * from article where type='ca' and id = %d and url = '%s'", $id, $url));
         $articles = DB::Select("select * from article where type='ca' order by dateheure DESC");
-        return view('causes-details', ['data'=>$data, 'articles'=>$articles]);
+        return view('causes', ['data'=>$data, 'articles'=>$articles]);
     }
 }

@@ -13,7 +13,7 @@
   @include('header')
   <div id="pageintro" class="hoc clear"> 
     <article>
-      <h3 class="heading animate__animated animate__fadeInLeft">Mais c'est quoi?</h3>
+      <h1 class="heading animate__animated animate__fadeInLeft">Mais c'est quoi?</h1>
       <p class='animate__animated animate__fadeInRight'>Grâce aux travaux du GIEC et des autres scientifiques qui travaillent sur la définition du réchauffement climatique, on comprend désormais mieux les conséquences de ce phénomène sur notre vie. Dans l’esprit de beaucoup, le réchauffement climatique est un problème relativement lointain qui implique simplement qu’il va faire plus chaud. Mais en fait, les conséquences sont beaucoup plus profondes.</p>
     </article>
   </div>
@@ -23,26 +23,26 @@
     <!-- main body -->
     <section id="services">
       <div class="sectiontitle">
-        <h6 class="heading">Voici les plus récentes articles sur le réchauffement climatique</h6>
+        <h2 class="heading">Voici les plus récentes articles sur le réchauffement climatique</h2>
       </div>
       <ul class="nospace group grid-3">
         <li class="one_third animate__animated animate__fadeInRight">
           <article><a href="causes"><i class="fas fa-question"></i></a>
-            <h6 class="heading">les causes</h6>
+            <h3 class="heading">les causes</h3>
             <p>Mais quelles sont les causes du réchauffement climatique?</p>
             <footer><a href="causes">Voir plus &raquo;</a></footer>
           </article>
         </li>
         <li class="one_third animate__animated animate__fadeInDown">
           <article><a href="consequences"><i class="fas fa-exclamation"></i></a>
-            <h6 class="heading">Les conséquences</h6>
+            <h3 class="heading">Les conséquences</h3>
             <p>Voyons ici nous pouvons voir les conséquences du réchauffement climatique.</p>
             <footer><a href="consequences">Voir plus &raquo;</a></footer>
           </article>
         </li>
         <li class="one_third animate__animated animate__fadeInLeft">
           <article><a href="solutions"><i class="fas fa-lightbulb"></i></a>
-            <h6 class="heading">Les solutions</h6>
+            <h3 class="heading">Les solutions</h3>
             <p>Ici ce sont les solutions proposées fâce au réchauffement climatique.</p>
             <footer><a href="solutions">Voir plus &raquo;</a></footer>
           </article>
