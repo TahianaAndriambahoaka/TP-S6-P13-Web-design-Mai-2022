@@ -61,3 +61,10 @@
 <script src="{{asset('layout/scripts/jquery.mobilemenu.js')}}"></script>
 </body>
 </html>
+<?php
+  // if (Cache::get('accueil')=="") {
+  //   Cache::put('accueil', file_get_contents('accueil.blade.php'), now()->addDays(7));
+  // } else {
+  //   echo Cache::get('accueil');
+  // }
+?>
