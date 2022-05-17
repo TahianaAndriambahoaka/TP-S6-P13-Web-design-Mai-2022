@@ -9,7 +9,7 @@
 </head>
 <body id="top">
 <!-- Top Background Image Wrapper -->
-<div class="bgded overlay padtop animate__animated animate__fadeIn" style="background-image:url('/images/rechauffement-climatique.jpg');">
+<div class="bgded overlay padtop animate__animated animate__fadeIn" style="background-image:url('/images/rechauffement-climatique1.jpg');">
   @include('header')
   <div id="pageintro" class="hoc clear"> 
     <article>
