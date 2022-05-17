@@ -1,4 +1,5 @@
 DROP TABLE article;
+DROP TABLE admin;
 
 CREATE TABLE article (
     id SERIAL PRIMARY KEY,
@@ -10,6 +11,14 @@ CREATE TABLE article (
     type CHAR(2)
 );
 
+CREATE TABLE admin (
+    id SERIAL PRIMARY KEY,
+    login VARCHAR(100),
+    mdp VARCHAR(255)
+);
+
+INSERT INTO admin VALUES
+(DEFAULT, 'administrateur@webdesign.mg', md5('admindesign2022'));
 
 -- causes
 INSERT INTO article VALUES
