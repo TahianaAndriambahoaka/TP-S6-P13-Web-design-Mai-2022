@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Image;
-use Illuminate\Support\Facades\Cache;
 
 class admin extends Controller
 {
@@ -16,23 +15,13 @@ class admin extends Controller
         $login = $request->input('login');
         $mdp = $request->input('mdp');
         if (count(DB::Select(sprintf("select * from admin where login='%s' and mdp = md5('%s')", $login, $mdp)))==0) {
-            if (Cache::get('admin.login')=="") {
-                Cache::put('admin.login', View('/admin.login', ['erreur'=>'Login ou mot de passe incorrect'])->render(), 604800);
-                return View('admin.login', ['erreur'=>'Login ou mot de passe incorrect']);
-            } else {
-                return Cache::get('admin.login');
-            }
+            return View('/admin.login', ['erreur'=>'Login ou mot de passe incorrect']);
         } else {
-            return View('admin.accueil', ['data'=>DB::Select("select * from article where type='ca' order by dateheure desc")]);
+            return View('/admin.accueil', ['data'=>DB::Select("select * from article where type='ca' order by dateheure desc")]);
         }
     }
     public function logout() {
-        if (Cache::get('admin.login')=="") {
-            Cache::put('admin.login', View('admin.login')->render(), 604800);
-            return View('admin.login', ['erreur'=>'Login ou mot de passe incorrect']);
-        } else {
-            return Cache::get('admin.login');
-        }
+        return View('admin.login');
     }
     public function causes() {
         return view('admin.accueil', ['data'=>DB::Select("select * from article where type='ca' order by dateheure desc")]);

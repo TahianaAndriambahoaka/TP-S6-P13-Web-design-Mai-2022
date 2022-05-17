@@ -6,18 +6,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Image;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Response;
 
 class accueil extends Controller
 {
     public function index() {
-        if (Cache::get('accueil')=="") {
-            $articles = DB::Select('select * from article order by dateheure DESC limit 6');
-            Cache::put('accueil', view('accueil', ['articles'=>$articles])->render(), 604800);
-            return view('accueil', ['articles'=>$articles]);
-        } else {
-            return Cache::get('accueil');
-        }
+        // Cache::forever('cle', 'voici la valeur du cache');
+        // // Cache::flush();
+        // dd(
+        //     Cache::get('cle')
+        // );
+        $articles = DB::Select('select * from article order by dateheure DESC limit 6');
+        return view('accueil', ['articles'=>$articles]);
     }
 
     public function resizeImage()
