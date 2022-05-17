@@ -3,21 +3,3 @@
     RewriteCond %{REQUEST_URI} !^public
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
-<IfModule mod_expires.c>
-    ExpiresActive on
-
-    # CSS and JavaScript
-    ExpiresByType text/css "access plus 1 hour"
-    ExpiresByType application/javascript "access plus 1 hour"
-
-    # Media: images, video, audio
-    ExpiresByType image/gif "access plus 1 minute"
-    ExpiresByType image/png "access plus 1 minute"
-    ExpiresByType image/jpg "access plus 1 minute"
-    ExpiresByType image/jpeg "access plus 1 minute"
-    ExpiresByType video/ogg "access plus 1 minute"
-    ExpiresByType audio/ogg "access plus 1 minute"
-    ExpiresByType video/mp4 "access plus 1 minute"
-    ExpiresByType video/webm "access plus 1 minute"
-</IfModule>
-SetEnv ENV_HTACCESS_READING true
