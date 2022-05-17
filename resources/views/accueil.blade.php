@@ -4,6 +4,8 @@
 <title>Réchauffement climatique</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{{asset('layout/styles/layout.css')}}" rel="stylesheet" type="text/css" media="all">
+<link href="{{asset('css/animate.min.css')}}" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
 <!-- Top Background Image Wrapper -->
@@ -53,9 +55,7 @@
 </div>
 @include('footer')
 <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
-
-<link href="{{asset('layout/styles/layout.css')}}" rel="stylesheet" type="text/css" media="all">
-<link href="{{asset('css/animate.min.css')}}" rel="stylesheet" type="text/css" media="all">
+<!-- JAVASCRIPTS -->
 <script src="{{asset('layout/scripts/jquery.min.js')}}"></script>
 <script src="{{asset('layout/scripts/jquery.backtotop.js')}}"></script>
 <script src="{{asset('layout/scripts/jquery.mobilemenu.js')}}"></script>

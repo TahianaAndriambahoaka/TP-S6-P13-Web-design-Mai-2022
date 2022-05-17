@@ -5,6 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Administrateur | Réchauffement climatique</title>
+  <link rel="stylesheet" href="{{asset('admin/template/vendors/feather/feather.css')}}">
+  <link rel="stylesheet" href="{{asset('admin/template/vendors/ti-icons/css/themify-icons.css')}}">
+  <link rel="stylesheet" href="{{asset('admin/template/vendors/css/vendor.bundle.base.css')}}">
+  <link rel="stylesheet" href="{{asset('admin/template/css/vertical-layout-light/style.css')}}">
+  <link rel="stylesheet" href="{{asset('admin/template/vendors/mdi/css/materialdesignicons.min.css')}}">
+  <link rel="shortcut icon" href="{{asset('admin/template/images/favicon.png')}}" />
 </head>
 
 <body>
@@ -168,13 +174,8 @@
     </div>
     <!-- page-body-wrapper ends -->
   </div>
-  
-  <link rel="stylesheet" href="{{asset('admin/template/vendors/feather/feather.css')}}">
-  <link rel="stylesheet" href="{{asset('admin/template/vendors/ti-icons/css/themify-icons.css')}}">
-  <link rel="stylesheet" href="{{asset('admin/template/vendors/css/vendor.bundle.base.css')}}">
-  <link rel="stylesheet" href="{{asset('admin/template/css/vertical-layout-light/style.css')}}">
-  <link rel="stylesheet" href="{{asset('admin/template/vendors/mdi/css/materialdesignicons.min.css')}}">
-  <link rel="shortcut icon" href="{{asset('admin/template/images/favicon.png')}}" />
+  <!-- container-scroller -->
+  <!-- plugins:js -->
   <script src="{{asset('admin/template/vendors/js/vendor.bundle.base.js')}}"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->
